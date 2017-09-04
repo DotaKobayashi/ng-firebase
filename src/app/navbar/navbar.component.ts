@@ -10,8 +10,7 @@ import * as firebase from 'firebase/app';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  title: 'App Titel';
+  title: 'Gallery';
   user: Observable<firebase.User>;
 
   constructor(private authService: AuthenticationService, private router: Router) { }

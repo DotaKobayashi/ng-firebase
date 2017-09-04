@@ -9,10 +9,14 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { UploadComponent } from './upload/upload.component';
 
+import { UploadService } from './services/upload.service';
+import { ImageService } from './services/image.service';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthguardService } from './services/authguard.service';
 
@@ -23,7 +27,9 @@ import { appRoutes } from '../routes';
     AppComponent,
     NavbarComponent,
     GalleryComponent,
-    LoginComponent
+    LoginComponent,
+    ImageDetailComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { appRoutes } from '../routes';
   ],
   providers: [
     AuthenticationService,
-    AuthguardService
+    AuthguardService,
+    ImageService,
+    UploadService
   ],
   bootstrap: [AppComponent]
 })
